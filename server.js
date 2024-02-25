@@ -29,6 +29,7 @@ app.get("/", function (req, res) {
     res.sendFile(__dirname + "/index.html");
 })
 
+
 app.get("/customer-login.html", function(req, res) {
   res.sendFile(__dirname + "/customer-login.html");
 })
@@ -44,6 +45,10 @@ app.get("/menu.html", function(req, res) {
 app.get("/thanks.html", function(req, res) {
     res.sendFile(__dirname + "/thanks.html");
   })  
+
+app.get("/index.html", function (req, res) {
+    res.sendFile(__dirname + "/index.html");
+})
 
 /*app.get("/index.ejs", function(req, res) {
     res.sendFile(__dirname + "/index.ejs");
