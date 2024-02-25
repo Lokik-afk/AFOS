@@ -65,6 +65,11 @@
     function generateOrderNumber() {
         return Math.floor(Math.random() * 900) + 100; // Generate a random number between 100 and 999
     }
+
+    // Redirect to menu.html after 10 seconds
+    setTimeout(function() {
+        window.location.href = "menu.html";
+    }, 10000); // 10000 milliseconds = 10 seconds
 </script>
 </body>
 </html>
