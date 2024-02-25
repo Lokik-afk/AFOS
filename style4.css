@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.timer-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.timer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+}
+
+.timer-progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #f27559; /* Change color of the progress bar */
+    clip-path: polygon(50% 0%, 50% 100%, 0% 100%, 0% 0%); /* Initial clip path for the progress bar */
+    transition: clip-path 1s linear; /* Smooth transition for clip path animation */
+}
+
+.timer-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: #333;
+    font-family: Arial, sans-serif;
+}

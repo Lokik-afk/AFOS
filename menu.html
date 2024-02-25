@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="logo.png" alt="Restaurant Logo" class="logo">
+            <h1>Eighty Rasta</h1>
+            <nav>
+                <ul>
+                    <li><a href="#menu" id="menu-btn">Menu</a></li>
+                    <li><a href="#" id="open-cart-btn">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="sections-container">
+    <section class="allergens-section">
+        <div class="container">
+            <h2>Allergens</h2>
+            <div class="allergens-box">
+            <div class="allergens-content">
+                <label for="allergens-input">Enter your allergens:</label>
+                <div class="allergens-dropdown-container">
+                <input type="text" id="allergens-input">
+                <div id="substitute-dropdown" class="substitute-dropdown"></div>
+                <button id="add-allergen-btn">Add Allergen</button>
+            </div>
+        </div>
+    </div>
+    </section>
+    <section class="allergen-types-section">
+        <div class="container">
+            <h2>Allergen Types and Substitutes</h2>
+            <ul class="allergen-list">
+                <li><strong>Milk : </strong>Almond Milk,Coconut Milk,Soy Milk</li>
+                <li><strong>Sunflower Oil : </strong>Coconut Oil,Almond Oil,Olive Oil</li>
+                <li><strong>Wheat : </strong>Quinoa,Oats,Rice Flour</li>
+                <li><strong>Eggs : </strong>Applesauce,Banana,Flaxseed Meal</li>
+                <!-- Add more allergens and substitutes as needed -->
+            </ul>
+        </div>
+    </section>
+    </section>
+
+    <section class="alternative-section">
+        <div class="container">
+            <h2>Finding Alternatives</h2>
+            <p>At Eighty Rasta, we understand the importance of catering to different dietary needs. Our allergens input feature allows you to specify any allergies or dietary restrictions you may have, and we'll suggest suitable alternatives while ensuring the same delicious taste.</p>
+            <p>Simply enter your allergens in the input field provided, and our system will analyze your preferences to recommend alternative menu items that meet your dietary requirements.</p>
+        </div>
+    </section>
+    
+    
+
+    <section id="menu-section" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div></div>
+            <h3>Sandwiches</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Panner Cheese s/w</h3>
+                    <img src="food1.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 300, Protein: 8g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Panner Cheese s/w" data-price="90" data-calories="300" data-protein="20">Add to Cart</button>
+                    <p class="item-price">₹90</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Panner Club s/w</h3>
+                    <img src="food2.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 350, Protein: 10g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Panner Club s/w" data-price="140" data-calories="350" data-protein="20">Add to Cart</button>
+                    <p class="item-price">₹140</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Chicken club s/w</h3>
+                    <p>Calories: 400, Protein: 15g</p>
+                    <img src="food3.jpeg" alt="Food 1" class="food-image">
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Chicken club s/w" data-price="150" data-calories="350" data-protein="15">Add to Cart</button>
+                    <p class="item-price">₹150</p>
+                </div>
+                </div>
+
+                <div></div>
+                <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Zinger Chicken club s/w</h3>
+                    <img src="food3.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 500, Protein: 18g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="zinger Chicken club s/w" data-price="190" data-calories="300" data-protein="20">Add to Cart</button>
+                    <p class="item-price">₹190</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Choclate s/w</h3>
+                    <img src="food4.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 450, Protein: 6g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Choclate s/w" data-price="110" data-calories="450" data-protein="6">Add to Cart</button>
+                    <p class="item-price">₹190</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Nuttela s/w</h3>
+                    <p>Calories: 450, Protein: 6g</p>
+                    <img src="food4.jpeg" alt="Food 1" class="food-image">
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Nuttela s/w" data-price="120" data-calories="450" data-protein="6">Add to Cart</button>
+                    <p class="item-price">₹120</p>
+                </div>
+            </div>
+
+            <h3>Burgers</h3>
+            <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Laverdure Burger</h3>
+                    <img src="food5.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 300, Protein: 10g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Laverdure Burger" data-price="140" data-calories="300" data-protein="10">Add to Cart</button>
+                    <p class="item-price">₹140</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Jalapeno cheese Burger</h3>
+                    <img src="food6.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 450, Protein: 12g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Jalapeno cheese Burger" data-price="170" data-calories="450" data-protein="12">Add to Cart</button>
+                    <p class="item-price">₹170</p>
+                </div>
+                <div class="menu-item">
+                    <h3>De-Boss Burger</h3>
+                    <p>Calories: 400, Protein: 10g</p>
+                    <img src="food7.jpeg" alt="Food 1" class="food-image">
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="De-Boss Burger" data-price="150" data-calories="400" data-protein="10">Add to Cart</button>
+                    <p class="item-price">₹150</p>
+                </div>
+            </div>
+
+            <div></div>
+                <div class="menu-items">
+                <div class="menu-item">
+                    <h3>Choriso Chicken Burger</h3>
+                    <img src="food8.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 500, Protein: 18g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Choriso Chicken Burger" data-price="150" data-calories="500" data-protein="18">Add to Cart</button>
+                    <p class="item-price">₹150</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Tandori Chicken Burger</h3>
+                    <img src="food9.jpeg" alt="Food 1" class="food-image">
+                    <p>Calories: 550, Protein: 14g</p>
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Tandori Chicken Burger" data-price="180" data-calories="550" data-protein="6">Add to Cart</button>
+                    <p class="item-price">₹180</p>
+                </div>
+                <div class="menu-item">
+                    <h3>Burger From Mars</h3>
+                    <p>Calories: 660, Protein: 18g</p>
+                    <img src="food10.jpeg" alt="Food 1" class="food-image">
+                    <div class="quantity-container">
+                        <button class="decrement-btn">-</button>
+                        <span class="quantity">1</span>
+                        <button class="increment-btn">+</button>
+                    </div>
+                    <button class="add-to-cart" data-name="Burger From Mars" data-price="190" data-calories="660" data-protein="6">Add to Cart</button>
+                    <p class="item-price">₹190</p>
+                </div>
+        </div>
+    </section>
+
+
+<!--part2-->
+
+
+
+<section id="menu-section" class="menu-section">
+    <div class="container">
+        <div></div>
+        <h3>Dietary Specialties / Refreshments</h3>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Veg Loafs</h3>
+                <img src="food11.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 250, Protein: 12g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Veg Loafs" data-price="110" data-calories="250" data-protein="12">Add to Cart</button>
+                <p class="item-price">₹110</p>
+            </div>
+            <div class="menu-item">
+                <h3>Panner Loaf</h3>
+                <img src="food12.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 350, Protein: 15g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Panner Loaf" data-price="140" data-calories="350" data-protein="15">Add to Cart</button>
+                <p class="item-price">₹140</p>
+            </div>
+            <div class="menu-item">
+                <h3>Hot Dog Loaf</h3>
+                <p>Calories: 400, Protein: 18g</p>
+                <img src="food13.jpeg" alt="Food 1" class="food-image">
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Hot Dog Loaf" data-price="170" data-calories="400" data-protein="18">Add to Cart</button>
+                <p class="item-price">₹170</p>
+            </div>
+            </div>
+
+            <div></div>
+            <div class="menu-items">
+            <div class="menu-item">
+                <h3>Chicken Loaf</h3>
+                <img src="food14.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 450, Protein: 20g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Chicken Loaf" data-price="170" data-calories="450" data-protein="20">Add to Cart</button>
+                <p class="item-price">₹170</p>
+            </div>
+            <div class="menu-item">
+                <h3>Zinger Supreme Loaf</h3>
+                <img src="food15.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 550, Protein: 22g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Zinger Supreme Loaf" data-price="180" data-calories="550" data-protein="6">Add to Cart</button>
+                <p class="item-price">₹180</p>
+            </div>
+            <div class="menu-item">
+                <h3>BBQ Chicken Wings</h3>
+                <p>Calories: 450, Protein: 13g</p>
+                <img src="food16.jpeg" alt="Food 1" class="food-image">
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="BBQ Chicken Wings" data-price="199" data-calories="450" data-protein="13">Add to Cart</button>
+                <p class="item-price">₹199</p>
+            </div>
+        </div>
+        <div class="menu-items">
+            <div class="menu-item">
+                <h3>Oyster Chicken Wings</h3>
+                <img src="food17.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 450, Protein: 13g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Oyster Chicken Wings" data-price="199" data-calories="450" data-protein="13">Add to Cart</button>
+                <p class="item-price">₹199</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Drumsticks</h3>
+                <img src="food18.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 550, Protein: 20g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Chicken Drumsticks" data-price="220" data-calories="550" data-protein="20">Add to Cart</button>
+                <p class="item-price">₹220</p>
+            </div>
+            <div class="menu-item">
+                <h3>Chicken Kabab</h3>
+                <p>Calories: 480, Protein: 20g</p>
+                <img src="food19.jpeg" alt="Food 1" class="food-image">
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Chicken Kabab" data-price="180" data-calories="480" data-protein="20">Add to Cart</button>
+                <p class="item-price">₹180</p>
+            </div>
+        </div>
+
+        <div></div>
+            <div class="menu-items">
+            <div class="menu-item">
+                <h3>Blackberry Faluda</h3>
+                <img src="food20.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 250, Protein: 6g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Blackberry Faluda" data-price="120" data-calories="250" data-protein="6">Add to Cart</button>
+                <p class="item-price">₹120</p>
+            </div>
+            <div class="menu-item">
+                <h3>Faluda Capital</h3>
+                <img src="food21.jpeg" alt="Food 1" class="food-image">
+                <p>Calories: 300, Protein: 6g</p>
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Faluda Treat" data-price="140" data-calories="300" data-protein="6">Add to Cart</button>
+                <p class="item-price">₹140</p>
+            </div>
+            <div class="menu-item">
+                <h3>Rasta Capital Faluda</h3>
+                <p>Calories: 350, Protein: 8g</p>
+                <img src="food22.jpeg" alt="Food 1" class="food-image">
+                <div class="quantity-container">
+                    <button class="decrement-btn">-</button>
+                    <span class="quantity">1</span>
+                    <button class="increment-btn">+</button>
+                </div>
+                <button class="add-to-cart" data-name="Rasta Capital Faluda" data-price="190" data-calories="350" data-protein="8">Add to Cart</button>
+                <p class="item-price">₹190</p>
+            </div>
+    </div>
+</section>
+<div class="cart-popup" id="cart-popup">
+        <div class="cart-content">
+            <span class="close-cart-btn" id="close-cart-btn">&times;</span>
+            <h2>Cart</h2>
+            <ul id="cart-content"></ul>
+            <p>Total: <span id="order-total">₹0</span></p>
+            <button class="clear-cart-btn">Clear Cart</button>
+            <button id="place-order-btn" class="place-order-btn">Place Order</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Eighty Rasta. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

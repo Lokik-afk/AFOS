@@ -1,0 +1,391 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.logo {
+    position: absolute;
+    top: 40px; /* Adjust the top position as needed */
+    left: 40px;
+    width: 80px; /* Adjust the width as needed */
+    height: 80px; /* Adjust the height as needed */
+    border-radius: 30%; /* Make the logo circular */
+    overflow: hidden; /* Ensure the logo remains within the circular boundary */
+
+}
+
+header h1 {
+    margin-top: 20px; /* Adjust the top margin to move the text down */
+    font-family: cursive; /* Change the font to cursive */
+    font-size: 36px;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav ul li {
+    display: inline;
+    text-align: center;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px; /* Make the edges circular */
+    transition: background-color 0.3s ease;
+    margin-top: 0px;
+    text-align: center;
+}
+
+nav ul li a:hover {
+    background-color: #ff7f50;
+}
+
+.menu-section {
+    padding: 80px 0;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.menu-section h2 {
+    text-align: center;
+}
+
+.menu-section h2 {
+    font-family: cursive;
+}
+
+.menu-section h3 {
+    font-family: cursive;
+}
+
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.cart-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.close-cart-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.cart-content h2 {
+    margin-top: 0;
+}
+
+.cart-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.place-order-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.place-order-btn:hover {
+    background-color: #ff7f50;
+}
+
+
+.clear-cart-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.clear-cart-btn:hover {
+    background-color: #ff7f50;
+}
+
+
+/* Existing CSS styles */
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.allergens-section {
+    background-color: #f8f8f8;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-family: cursive;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.allergens-box {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 30px;
+    padding: 20px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    margin-top: 20px;
+}
+
+.allergens-content {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+}
+
+.allergens-content label,
+.allergens-content input {
+    margin-bottom: 10px;
+}
+
+.allergens-content button {
+    padding: 8px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.allergens-content input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 10px; /* Round the edges */
+}
+
+.allergens-content button:hover {
+    background-color: #ff7f50;
+}
+
+.allergen-types-section {
+    background-color: #f8f8f8;
+    padding: 20px 20px; /* Reduce padding */
+    text-align: center;
+    border-radius: 20px; /* Reduce border radius */
+    max-width: 800px; /* Set maximum width */
+    margin: 0 auto; /* Center horizontally */
+    margin-bottom: 20px; /* Add margin bottom */
+    flex: 0 0 48%;
+    text-align: center;
+
+}
+
+.allergen-types-section h2 {
+    font-family: cursive;
+    text-align: center;
+}
+
+
+.sections-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between sections */
+    margin-bottom: 20px; /* Add margin bottom to create space between sections */
+}
+
+.allergen-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.allergen-list li {
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Add border for each list item */
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+}
+
+.food-image {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    float: right; /* Float image to the right */
+    margin-left: 20px; /* Add space between image and text */
+    display: block;
+}
+
+.menu-item:hover {
+    /* Apply hover effect */
+    transform: scale(1.1); /* Scale the item on hover */
+    transition: transform 0.3s ease; /* Add transition for smooth effect */
+}
+
+/* Styles for Add to Cart button */
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.add-to-cart:hover {
+    background-color: #ff7f50;
+}
+
+/* Styles for quantity selector */
+.quantity-container {
+    display: flex;
+    align-items: center;
+}
+
+.decrement-btn,
+.increment-btn {
+    padding: 6px 12px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.decrement-btn:hover,
+.increment-btn:hover {
+    background-color: #ff7f50;
+}
+
+.quantity {
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+/* Styles for Alternative Section */
+.alternative-section {
+    background-color: #f8f8f8;
+    padding: 40px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.alternative-section .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.alternative-section h2 {
+    font-family: cursive;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.alternative-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.allergens-dropdown-container {
+    position: relative;
+}
+
+.substitute-dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Position the dropdown below the input field */
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: calc(100% - 2px); /* Adjust the width to match the input field */
+    display: none; /* Initially hide the dropdown */
+}
+
+.substitute-option {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.substitute-option:hover {
+    background-color: #f0f0f0;
+}
+
+.substitute-option {
+    pointer-events: none;
+}
+
+.menu-section {
+    margin-bottom: 50px; /* Adjust the value as needed for the desired spacing */
+}

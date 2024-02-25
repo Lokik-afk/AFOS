@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+<div>
+    <h1>Thank you for ordering with us!</h1>
+    <p>We are preparing your order with care. It will be with you shortly.</p>
+    <p>Your Order No: <span id="order-number"></span></p>
+</div>
+
+<div class="timer-container">
+    <div class="timer-bg"></div>
+    <div class="timer-progress" id="timer-progress"></div>
+    <div class="timer-text" id="timer-text">30:00</div>
+</div>
+
+<script>
+    // JavaScript code for updating the timer
+    const timerText = document.getElementById('timer-text');
+    const timerProgress = document.getElementById('timer-progress');
+    let totalTime = 1800; // 30 minutes in seconds
+    let timeLeft = totalTime;
+
+    // Function to update the timer display
+    function updateTimer() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        timerText.textContent = formattedTime;
+
+        const progress = (totalTime - timeLeft) / totalTime * 100; // Calculate progress percentage
+        timerProgress.style.clipPath = `polygon(50% 0%, 50% 100%, ${progress}% 100%, ${progress}% 0%)`;
+
+        if (timeLeft === 0) {
+            clearInterval(timerInterval); // Stop the timer when it reaches 0
+        } else {
+            timeLeft--; // Decrement time left
+            // Store timeLeft in local storage
+            localStorage.setItem('timeLeft', timeLeft);
+        }
+    }
+
+    // Initial call to update the timer
+    updateTimer();
+
+    // Update the timer every second
+    const timerInterval = setInterval(updateTimer, 1000);
+
+    // Retrieve order number from local storage or generate a new one
+    let orderNumber = localStorage.getItem('orderNumber');
+    if (!orderNumber) {
+        orderNumber = generateOrderNumber();
+        localStorage.setItem('orderNumber', orderNumber);
+    }
+    const orderNumberElement = document.getElementById('order-number');
+    orderNumberElement.textContent = orderNumber;
+
+    // Function to generate a random order number
+    function generateOrderNumber() {
+        return Math.floor(Math.random() * 900) + 100; // Generate a random number between 100 and 999
+    }
+</script>
+</body>
+</html>

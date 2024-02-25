@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Orders</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Order ID</th>
+                    <th scope="col">Cart Content</th>
+                    <th scope="col">Done</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% orderList.forEach(Order => { %>
+                    <tr>
+                        <td><%= Order._id %></td>
+                        <td><%= Order.cartContent %></td>
+                        <td>
+                            <input type="checkbox" class="order-checkbox" data-order-id="<%= Order._id %>"
+                                <% if (Order.done) { %> checked <% } %>>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.order-checkbox').change(function() {
+                var orderId = $(this).data('order-id');
+                var isChecked = $(this).prop('checked');
+                // Update local storage
+                localStorage.setItem(orderId, isChecked);
+            });
+
+            // Restore checked state from local storage
+            $('.order-checkbox').each(function() {
+                var orderId = $(this).data('order-id');
+                var isChecked = localStorage.getItem(orderId) === 'true';
+                $(this).prop('checked', isChecked);
+            });
+        });
+    </script>
+</body>
+</html>
